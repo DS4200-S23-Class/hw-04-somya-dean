@@ -1,0 +1,26 @@
+body {
+	font-family: arial
+}
+
+.centered {
+	text-align: center;
+}
+
+.column-container {
+	display: flex;
+	flex-direction: row;
+	margin: 0px 32px;
+}
+
+.column-1 {
+	flex: 60%;
+}
+
+.column-1 {
+	flex: 40%;
+}
+
+.svg {
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+}
