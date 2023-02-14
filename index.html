@@ -12,14 +12,64 @@
     <h1 class="centered">hw-04: Event Handling</h1>
     <div class="column-container">
         <div class="column-1">
-            <svg class="svg" width=400 height=400>
-                <circle id="circle1" onmouseover="mouseOverCircle1()" onmouseout="mouseOutCircle1()" onmouseclick="mouseClickCircle1()" cx="40" cy="320" r="10" class="point"/>
-                <circle id="circle2" onmouseover="mouseOverCircle2()" onmouseout="mouseOutCircle2()" onmouseclick="mouseClickCircle2()" cx="80" cy="240" r="10" class="point"/>
-                <circle id="circle3" onmouseover="mouseOverCircle3()" onmouseout="mouseOutCircle3()" onmouseclick="mouseClickCircle3()" cx="240" cy="320" r="10" class="point"/>
-                <circle id="circle4" onmouseover="mouseOverCircle4()" onmouseout="mouseOutCircle4()" onmouseclick="mouseClickCircle4()" cx="360" cy="40" r="10" class="point"/>
+            <svg class="svg" id="points" width=400 height=400>
+                <circle id="circle1" onmouseover="mouseOverHandler(this)" onmouseout="mouseOutHandler(this)" onclick="mouseClickHandler(this)" cx="40" cy="320" r="10" class="point"/>
+                <circle id="circle2" onmouseover="mouseOverHandler(this)" onmouseout="mouseOutHandler(this)" onclick="mouseClickHandler(this)" cx="80" cy="240" r="10" class="point"/>
+                <circle id="circle3" onmouseover="mouseOverHandler(this)" onmouseout="mouseOutHandler(this)" onclick="mouseClickHandler(this)" cx="240" cy="320" r="10" class="point"/>
+                <circle id="circle4" onmouseover="mouseOverHandler(this)" onmouseout="mouseOutHandler(this)" onclick="mouseClickHandler(this)" cx="360" cy="40" r="10" class="point"/>
             </svg>
         </div>
-        <div class="column-2"></div>
+        <div class="column-2">
+            <div id="last-point-clicked">
+            </div>
+            <div id="enter-point">
+                <div class="select-text">Select the x coordinate for the point you want to add. <span>
+                    <select name="x-select" id="x-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                </select></span>
+                <div class="select-text">Select the y coordinate for the point you want to add. <span>
+                    <select name="y-select" id="y-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                </select></span>
+            </div>
+            <button onclick="enterCoordinate()">Enter</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <h2 class="centered">Acknowledgements</h2>
+    <div>
+      <ul>
+        <li>https://www.w3schools.com/html/default.asp</li>
+        <li>https://www.w3schools.com/html/html_links.asp</li>
+        <li>
+          https://www.geeksforgeeks.org/how-to-define-two-column-layout-using-flexbox/
+        </li>
+        <li>https://www.w3schools.com/graphics/svg_circle.asp</li>
+        <li>https://learn-the-web.algonquindesign.ca/topics/advanced-svg/</li>
+        <li>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
+        <li>https://css-tricks.com/dont-overthink-flexbox-grids/</li>
+        <li>https://stackoverflow.com/questions/22894540/creating-circles-with-svg-and-javascript</li>
+        <li>https://stackoverflow.com/questions/8215021/create-svg-tag-with-javascript</li>
+        <li>https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript</li>
+      </ul>
     </div>
 
     <script src="./main.js" type="text/javascript"></script>
